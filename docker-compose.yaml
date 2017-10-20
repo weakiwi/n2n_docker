@@ -1,5 +1,5 @@
 n2n:
-  image: registry.cn-hangzhou.aliyuncs.com/weakiwi/n2n_docker:dhcp
+  image: registry.cn-hangzhou.aliyuncs.com/weakiwi/n2n_docker
   net: host
   privileged: true
   restart: always

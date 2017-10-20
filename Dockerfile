@@ -1,4 +1,4 @@
-FROM weakiwi/n2n_docker
+FROM registry.cn-hangzhou.aliyuncs.com/weakiwi/n2n_docker:dhcp
 RUN yum install dhclient -y
 #HEALTHCHECK --interval=60s --timeout=10s \
 #    CMD ping $N2N_NODE -c5 || exit 1
