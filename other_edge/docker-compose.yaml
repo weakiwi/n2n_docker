@@ -1,0 +1,10 @@
+n2n:
+  image: registry.cn-hangzhou.aliyuncs.com/weakiwi/n2n_docker
+  net: host
+  privileged: true
+  restart: always
+  environment:
+  - N2N_GROUP=mypbxnet
+  - N2N_PASS=mypass
+  - N2N_SERVER=
+  - N2N_INTERFACE=n2n1
