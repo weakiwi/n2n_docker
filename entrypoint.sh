@@ -17,3 +17,7 @@ then
 else
     edge -d $N2N_INTERFACE -a $STATIC_IP -c $N2N_GROUP -k $N2N_PASS -l $N2N_SERVER -f -r
 fi
+if [ -z $SUPERNODE ]
+then
+    supernode -l 5353 -f
+fi
