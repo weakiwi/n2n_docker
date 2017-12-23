@@ -6,5 +6,6 @@ n2n:
   environment:
   - N2N_GROUP=mypbxnet
   - N2N_PASS=mypass
-  - N2N_SERVER=
+  - N2N_SERVER=118.190.75.175:5353
   - N2N_INTERFACE=n2n1
+  - STATIC_IP=10.9.9.135

@@ -4,6 +4,10 @@ edgepipe=/tmp/f$RANDOM
 dhcppipe=/tmp/d$RANDOM
 mkfifo $edgepipe
 mkfifo $dhcppipe
+if [ -z $SUPERNODE ]
+then
+    supernode -l 5353 -f
+fi
 if [ -z $STATIC_IP ]
 then
     nohup edge -d $N2N_INTERFACE -a dhcp:0.0.0.0 -c $N2N_GROUP -k $N2N_PASS -l $N2N_SERVER -f -r > /workdir/n2n.log &
@@ -16,8 +20,4 @@ then
     tail -f /workdir/n2n.log
 else
     edge -d $N2N_INTERFACE -a $STATIC_IP -c $N2N_GROUP -k $N2N_PASS -l $N2N_SERVER -f -r
-fi
-if [ -z $SUPERNODE ]
-then
-    supernode -l 5353 -f
 fi
